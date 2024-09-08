@@ -1,0 +1,8 @@
+select count(customer_name) from orders;
+
+select count(grade) from orders where grade is not null;
+
+select city ,max(grade) as maximum from orders group by city;
+
+select customer_id , order_date, max(purch_amt) group by customer_id,order_date having max(purch_amt) in(2000, 3000, 5760, 6000) ;
+
